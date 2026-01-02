@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from database_config import executar_query_fetchall, executar_query_commit
+from backend.database_config import executar_query_fetchall, executar_query_commit
 
 apostas_bp = Blueprint('apostas', __name__)
 

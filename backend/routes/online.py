@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from database_config import listar_usuarios_online
+from backend.database_config import listar_usuarios_online
 
 online_bp = Blueprint('online', __name__)
 

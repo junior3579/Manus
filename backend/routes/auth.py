@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
-from database_config import executar_query_fetchall, atualizar_atividade_usuario
-from socketio_instance import get_socketio
+from backend.database_config import executar_query_fetchall, atualizar_atividade_usuario
+from backend.socketio_instance import get_socketio
 
 auth_bp = Blueprint('auth', __name__)
 
