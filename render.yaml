@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: stake-arena
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --worker-class eventlet -w 1 backend.main:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DB_HOST
+        value: ep-aged-tooth-a5g5dkoi-pooler.us-east-2.aws.neon.tech
+      - key: DB_NAME
+        value: neondb
+      - key: DB_USER
+        value: neondb_owner
+      - key: DB_PASS
+        value: npg_bVuGgN83hLrp
+      - key: DB_PORT
+        value: "5432"
